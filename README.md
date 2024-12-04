@@ -5,3 +5,4 @@
 ## Extensions
 
 - Day 3: nested mul(mul(...), 3)
+- Day 4: make the "X-shaped MAS" search function generic to the keyword & intersecting letter
