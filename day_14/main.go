@@ -112,7 +112,7 @@ func part1(particles string, width int, height int, timesteps int) int {
 
 func part2(particles string, width int, height int) int {
 	for timesteps := 0; timesteps < 10000; timesteps += 1 {
-		newParticles, _ := simulate(strings.Clone(particles), width, height, timesteps)
+		newParticles, _ := simulate(particles, width, height, timesteps)
 		renderPNG(newParticles, width, height, fmt.Sprintf("tmp/%04d.png", timesteps))
 	}
 	return 0
@@ -128,5 +128,5 @@ func main() {
 	height := 103
 	timesteps := 100
 	fmt.Printf("Part 1: %d\n", part1(string(file), width, height, timesteps))
-	part2(strings.Clone(string(file)), width, height)
+	part2(string(file), width, height)
 }
